@@ -33,6 +33,14 @@ public int factorial(int value)
        */
 
 	//TODO
+	if (value == 1)
+	{
+		return value;
+	}
+	else
+	{
+		return value * factorial(value - 1);
+	}
 
 	
 
@@ -46,7 +54,6 @@ public int factorial(int value)
        */
 
 	//TODO
-	return 1;
 
 }
 
@@ -72,7 +79,14 @@ public int fibonacci(int n)
 
 
 	//TODO
-	return -1;
+	if (n == 1 || n == 2)
+	{
+		return 1;
+	}
+	else
+	{
+		return fibonacci(n - 1) + fibonacci(n-2);
+	}
 
 
     
@@ -106,24 +120,27 @@ protected final class Tree
     public Tree(int value)
     {
 	//TODO
+		children = new ArrayList<Tree>();
+		this.value = value;
 	
     }
     
     public int getValue()
     {
 	//TODO
-	return -1;
+		return value;
     }
     
     public ArrayList<Tree> getChildren()
     {
 	//TODO
-	return null;
+		return children;
     }
     
     public void add(Tree child)
     {
 	//TODO
+		children.add(child);
     }
 }
     
